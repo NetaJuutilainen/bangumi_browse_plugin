@@ -185,6 +185,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
                 required=False,
             ),
         ],
+        visibility="visible",
     )
     async def handle_search_subject(self, keyword: str = "", **kwargs: Any) -> dict[str, str]:
         try:
@@ -232,6 +233,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
                 required=True,
             ),
         ],
+        visibility="visible",
     )
     async def handle_get_subject(self, subject_id: int = 0, **kwargs: Any) -> dict[str, str]:
         del kwargs
@@ -294,6 +296,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
                 required=False,
             ),
         ],
+        visibility="visible",
     )
     async def handle_get_persons(self, subject_id: int = 0, **kwargs: Any) -> dict[str, str]:
         def _priority(rel: str) -> int:
@@ -418,6 +421,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
                 required=False,
             ),
         ],
+        visibility="visible",
     )
     async def handle_get_season(self, year: int = 0, **kwargs: Any) -> dict[str, str]:
         try:
@@ -470,6 +474,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
             "注意：该功能通过解析 Bangumi 网页实现，页面结构变更可能导致暂时不可用。"
         ),
         parameters=[],
+        visibility="visible",
     )
     async def handle_get_calendar(self, **kwargs: Any) -> dict[str, str]:
         del kwargs
@@ -526,6 +531,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
                 required=False,
             ),
         ],
+        visibility="visible",
     )
     async def handle_get_episodes(self, subject_id: int = 0, **kwargs: Any) -> dict[str, str]:
         try:
@@ -579,6 +585,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
                 required=False,
             ),
         ],
+        visibility="visible",
     )
     async def handle_get_episode_comments(self, episode_id: int = 0, **kwargs: Any) -> dict[str, str]:
         try:
@@ -629,6 +636,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
                 required=True,
             ),
         ],
+        visibility="visible",
     )
     async def handle_get_relations(self, subject_id: int = 0, **kwargs: Any) -> dict[str, str]:
         del kwargs
@@ -690,6 +698,7 @@ class BangumiBrowsePlugin(MaiBotPlugin):
                 required=False,
             ),
         ],
+        visibility="visible",
     )
     async def handle_get_reviews(self, subject_id: int = 0, **kwargs: Any) -> dict[str, str]:
         try:
